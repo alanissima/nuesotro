@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,300;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+
+
+:root{
+    --principal: #FBF4F4;
+    --secundaria: #F7E7E7;
+    --contraste: #382A40;
+    --complemento: #B6C1B9;
+}
+
+body { 
+    background-color: var(--principal);   
+}
+
+body.menu{
+    background-color: var(--complemento);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    color: var(--principal);
+    text-decoration: none;
+}
+
+.cabecalho{
+    background-color: var(--secundaria);
+    height: min-content;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-left: 6em;
+    margin-right: 6em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.cabecalho-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gruppo', cursive;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: var(--principal);
+    text-decoration: none;
+    padding: none;
+}
+
+.logo{
+    font-family: 'Gruppo', cursive;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: var(--contraste);
+    text-decoration: none;
+    padding: none;
+}
+
+p{
+    font-family: 'Source Sans Pro', sans-serif;
+}

@@ -1,2 +1,2 @@
 # nuesotro
- Projeto final da mat[eria de Linguagem de Programação para Web
+ Projeto final da matéria de Linguagem de Programação para Web
