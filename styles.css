@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,300;1,400;1,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
 
 :root{
     --principal: #FBF4F4;
@@ -9,16 +15,29 @@
     --complemento: #B6C1B9;
 }
 
-body { 
-    background-color: var(--principal);   
-}
+/* DEFINIÇÕES COMUNS */
 
-body.menu{
-    background-color: var(--complemento);
+body { 
+    background-color: var(--principal);
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 20px;
-    color: var(--principal);
+    color: var(--contraste);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px; 
+
+}
+
+.logo{
+    font-family: 'Gruppo', cursive;
+    font-size: 30px;
+    letter-spacing: 2px;
+    line-height: 1;
+    color: var(--contraste);
     text-decoration: none;
+    padding: none;
 }
 
 .cabecalho{
@@ -34,7 +53,36 @@ body.menu{
     align-items: center;
 }
 
+.texto{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+}
+
+/* DEFINIÇÕES MENU */
+
+.menu{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px; 
+    background-color: var(--complemento);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    color: var(--principal);
+}
+
+a.menu{
+    background-color: var(--complemento);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    color: var(--principal);
+    text-decoration: underline;
+}
+
 .cabecalho-menu{
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -47,15 +95,99 @@ body.menu{
     padding: none;
 }
 
-.logo{
-    font-family: 'Gruppo', cursive;
-    font-size: 30px;
-    letter-spacing: 2px;
-    color: var(--contraste);
-    text-decoration: none;
-    padding: none;
+.sair{
+    background-color: transparent;
+    border: solid 2px var(--principal);
+    border-radius: 20px;
+    width: 100px;
+    height: 30px;
+    color: var(--principal);
+    font-size: 15px;
+
 }
 
-p{
+/* DEFINIÇÕES INDEX */
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+    display:block;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 8.7em; 
+    padding-top: 10em;
+}
+
+.logo-destaque{
+    font-family: 'Gruppo', cursive;
+    font-size: 150px;
+    letter-spacing: 2px;
+    line-height: 0.7;
+    font-style: none;
+    margin: 0;
+    padding-bottom: 15px;
+    color: var(--contraste);
+    text-decoration: none;
+}
+
+.texto-destaque{
+    font-size: 28px;
+    color: var(--contraste);
+    font-style: italic;
+}
+
+.form{
+    background-color: var(--secundaria);
+    height: max-content;
+    width: 400px;
+    border: solid 15px var(--secundaria);
+    border-radius: 20px;
+}
+
+.input-form{
+    background-color: var(--complemento);
+    border: none;
+    border-radius: 10px;
+    padding-left: 9em;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+::-webkit-input-placeholder{
     font-family: 'Source Sans Pro', sans-serif;
+    font-size: 12px;
+    color: var(--principal);
+    opacity: 1;
+    letter-spacing: 4px;
+}
+
+.input-radio{
+    font-size: 15px; 
+    margin: 1em;
+    gap: 1em;
+}
+
+.entrar-btn{
+    font-size: 20px;
+    font-style: bold;
+    background-color: var(--contraste);
+    border: solid 10px var(--contraste);
+    border-radius: 10px;
+    color: var(--principal);
+    height: 50px;
+    width: 100%;
+}
+
+.entrar-btn:hover{
+    background-color: var(--principal);
+    border: solid 10px var(--principal);
+    border-radius: 10px;
+    color: var(--contraste);
+    height: 50px;
+    width: 100%;
 }
