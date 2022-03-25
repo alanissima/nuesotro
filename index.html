@@ -19,15 +19,15 @@
 		<form class="form" id="indexform" name="indexform" method="post" action="index.php">
 			<input class="input-form" type="text" name="email" autocomplete="off" placeholder="insira seu email">
 
-			<div class="input-radio">
-				<input type="radio" id="empresa" name="1" value="empresa">
-				<label for="empresa"> sou uma empresa </label>
-			</div>
-
-			<div class="input-radio">
-				<input type="radio" id="cliente" name="1" value="cliente">
-				<label for="cliente"> sou um cliente </label>
-			</div>
+			<div>
+				<input type="checkbox" name = "tipoUsuario" value = "empresa">
+				<label for = "empresa"> sou uma empresa </label>
+			  </div>
+		  
+			  <div>
+				<input type="checkbox" name = "tipoUsuario" value = "cliente" >
+				<label for = "cliente"> sou um cliente </label>
+			  </div>
 
 			<button class="entrar-btn">
 				entrar
