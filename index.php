@@ -1,29 +1,30 @@
 <?php
 session_start();
-if(isset($_POST["email"]) ){
+if(isset($_POST["email"]) && isset($_POST["senhalogin"])){
 $email = $_POST["email"];
-$tipoUsuario = $_POST['tipoUsuario'];
+$senhalogin = $_POST["senhalogin"];
 
-if(!(empty($email) )) {
+if(!(empty($email) or empty($senhalogin))){
 include("conexao.php");
-$sql="select * from usuario where email = '$email' ";
+$sql= " SELECT * from usuario where email = '$email' and senhalogin ='$senhalogin'";
+echo "$sql";
 $res = mysqli_query($conexao,$sql);
 $linha = mysqli_num_rows($res);
-if($linha==0) {
-session_destroy();
 
-if ($_POST['tipoUsuario'] == 'empresa'){
-header("Location: cadastroEmpresa.html");
-    } else {
-        header("Location: cadastroCliente.html");
-    }
-}
-else {
-session_destroy();
-header("Location: login.html");
+if($linha == 1) {
+    //$_SESSION["$email"] = $_POST["email"];
+    //$_SESSION["$senhalogin"] = $_POST["senhalogin"];
+    header("Location: menu.html");
+
 exit;
 }
-}
+
+else {
+    session_destroy();
+    echo "Login ou senha incorretos!";
 }
 
+}
+
+    }
 ?>

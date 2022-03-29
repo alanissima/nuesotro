@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Cadastro Empresa</title>
+    </head>
+
+    <body>
+    <form id="formUsuario" name="formUsuario" method="post" action="cadastroUsuario.php">
+
+        <p> 
+            <input type="text" name="email" id="email" placeholder="insira o email" autocomplete="off"/>
+        </p>
+        
+        <p>
+            <input type="text" name="senha" id="senha" placeholder="insira a senha" autocomplete="off"/>
+        </p>
+
+        <div>
+            <input type="radio" name = "tipoUsuario" value = "empresa">
+            <label for = "empresa"> sou uma empresa </label>
+          </div>
+      
+          <div>
+            <input type="radio" name = "tipoUsuario" value = "cliente" >
+            <label for = "cliente"> sou um cliente </label>
+          </div>
+
+
+        <input Type="submit" name="gravaUsuario" id="gravaUsuario" value="Cadastrar"/>
+    </body>
+</html>
