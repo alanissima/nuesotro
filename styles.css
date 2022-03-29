@@ -32,8 +32,6 @@ main{
 
 /**/
 
-
-
 .logo{
     font-family: 'Gruppo';
     font-size: 30px;
@@ -44,15 +42,6 @@ main{
 }
 
 .cabecalho{
-    background-color: var(--secundaria);
-    font-family: 'Gruppo';
-    font-style: normal;
-    color: var(--contraste);
-    font-weight: 400;
-    font-size: 80px;
-    line-height: 53px;
-    text-align: center;
-
     height: max-content;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -64,6 +53,18 @@ main{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin: 0;
+}
+
+.cabecalho-logo{
+    font-family: 'Gruppo';
+    font-style: normal;
+    color: var(--contraste);
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 53px;
+    text-align: center;
+
     margin: 0;
 }
 
@@ -156,7 +157,6 @@ body.body-container{
     font-size: 20px;
     display: -webkit-inline-flex;
 }
-
 
 .container {
     width: 50%;

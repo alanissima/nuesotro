@@ -9,7 +9,7 @@ $conexao = mysqli_connect($servidor,$usuario,$senha,$banco) or die ("Não foi
 possível conectar-se ao servidor. Erro: ". mysqli_connect_error());
 // ------ Seleciona o banco de dados especifico no servidor
 /* Verifica se houve conexão com o banco de dados no servidor e mostra na tela.*/
-if(isset($conexao)){
-echo "Banco de dados selecionado com sucesso.";
-}
+    if(isset($conexao)){
+        //echo "Banco de dados selecionado com sucesso.";
+    }
 ?>
