@@ -2,9 +2,9 @@
 include("conexao.php");
 
 $email = $_POST["email"];
-$senha = $_POST["senhalogin"];
+$senhalogin = $_POST["senhalogin"];
 
-$sqlCadastrarUsuario = mysqli_query($conexao,"insert into usuario(senhalogin,email) value('$senhalogin','$email')") or die("Erro ao gravar registro. " . mysqli_error($conexao));
+$sqlCadastrarUsuario = mysqli_query($conexao,"insert into usuario (senhalogin, email) values ('$senhalogin','$email')") or die("Erro ao gravar registro. " . mysqli_error($conexao));
 
 
 if ($_POST['tipoUsuario'] == 'empresa'){
