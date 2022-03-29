@@ -19,7 +19,7 @@ $pesquisa = $_GET["pesquisa"];
 
 
             <?php
-            $registrosNome= mysqli_query($conexao,"select nomeProduto, descricaoProduto, estoque, preco, categoria, imagem from
+            $registrosNome= mysqli_query($conexao,"select nomeProduto, descricaoProduto, estoque, preco, categoria from
             produto where nomeProduto like '%$pesquisa%' or categoria like '%$pesquisa%'");
 
             $num_linhas = mysqli_num_rows($registrosNome);
@@ -31,10 +31,10 @@ $pesquisa = $_GET["pesquisa"];
             $estoque = $dados["estoque"];
             $preco = $dados["preco"];
             $categoria = $dados["categoria"];
-            $imagem = $dados["imagem"];
+            //$imagem = $dados["imagem"];
 
             echo "<div>
-                    <div> $imagem </div>
+                    <div> imagem </div>
                     <div> $nomeProduto<br>
                           $descricaoProduto<br><br>
                           estoque: $estoque<br>
