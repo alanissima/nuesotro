@@ -133,6 +133,7 @@ main{
     font-family: 'Gruppo';
     color: var(--contraste);
     font-size: 300px;
+    font-weight: 200;
     letter-spacing: 2px;
     line-height: 180px;
     font-style: none;
@@ -144,7 +145,7 @@ main{
 .texto-destaque{
     color: var(--contraste);
     font-style: italic;
-    font-weight: 400;
+    font-weight: 350;
     font-size: 50px;
     line-height: 63px;
     text-align: center;
