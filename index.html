@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
-<body>
+<body style="display: -webkit-inline-flex;">
 	<div class="container">
 		<h1 class="logo-destaque">
 			nues<br>otro
@@ -17,21 +17,13 @@
 
 	<div class="container">
 		<form class="form" id="indexform" name="indexform" method="post" action="index.php">
-			<input class="input-form" type="text" name="email" autocomplete="off" placeholder="insira seu email">
-
-			<div>
-				<input type="checkbox" name = "tipoUsuario" value = "empresa">
-				<label for = "empresa"> sou uma empresa </label>
-			  </div>
-		  
-			  <div>
-				<input type="checkbox" name = "tipoUsuario" value = "cliente" >
-				<label for = "cliente"> sou um cliente </label>
-			  </div>
-
-			<button class="entrar-btn">
+            <input class="input-form" type="text" name="email" autocomplete="off" placeholder="insira seu email">
+            <input class="input-form" type="text" name="senhalogin" autocomplete="off" placeholder="insira sua senha">
+            
+            <button class="entrar-btn">
 				entrar
 			</button>
+			<a href="cadastroUsuario.html" class="link-cadastro">não tenho uma conta</a>
 		</form>
 	</div>	
 
