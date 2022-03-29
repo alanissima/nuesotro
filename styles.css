@@ -73,15 +73,22 @@ main{
     margin: 0;
 }
 
-.menu-categorias{
-    background-color: var(--complemento);
-    height: 300px;
-    width: 40%;
+.menu-anuncio{
+    display: -webkit-inline-flex;
+}
+
+.anuncio{
+    background-color: var(--secundaria);
+    height: 200px;
+    width: 20%;
+
+    border-radius: 20px;
+    margin: 40px;
 }
 
 .menu-item{
     font-family: 'Source Sans Pro';
-    font-size: 22px;
+    font-size: 25px;
     color: var(--complemento);
     text-decoration: underline;
 
@@ -116,7 +123,7 @@ main{
 
 .sair:hover{
     background-color: var(--complemento);
-    border: solid 2px var(--principal);
+    border: hidden;
     color: var(--principal);
     font-size: 20px; 
 }
