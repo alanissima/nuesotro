@@ -106,11 +106,6 @@ main{
 }
 
 .sair{
-    background-color: var(--principal);
-    border: solid 2px var(--complemento);
-    color: var(--complemento);
-    font-size: 20px;
-
     border-radius: 100px;
     width: 150px;
     height: 50px;
@@ -126,6 +121,15 @@ main{
     border: hidden;
     color: var(--principal);
     font-size: 20px; 
+}
+
+a.sair{
+    padding-top: 10px;
+    background-color: var(--principal);
+    border: solid 2px var(--complemento);
+    color: var(--complemento);
+    font-size: 20px;
+
 }
 
 /* DEFINIÇÕES INDEX */
@@ -194,6 +198,11 @@ main{
     justify-content: center;
 }
 
+input:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
 .entrar-btn{
     font-size: 25px;
     font-style: bold;
@@ -201,7 +210,7 @@ main{
     border: solid 10px var(--contraste);
     border-radius: 10px;
     
-    margin-top: 40px;
+    margin-top: 30px;
     
     color: var(--principal);
     height: 55px;
