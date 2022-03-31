@@ -1,30 +1,35 @@
 <!doctype html>
 <html>
-    <head>
-    <meta charset="utf-8">
-    <title>Cadastro Empresa</title>
-    </head>
 
-    <body>
-    <form id="formEmpresa" name="formEmpresa" method="post" action="cadastroEmpresa.php">
+<head>
+    <title>cadastro de empresa em nuesotro</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
 
-        <p> 
-            <input type="text" name="nomeEmpresa" id="nomeEmpresa" placeholder="insira o nome da empresa" autocomplete="off"/>
-        </p>
+<body class="body-container">
+    <div class="container">
+		<h1 class="logo-destaque">
+			nues<br>otro
+		</h1>
+		<p class="texto-destaque">não é como nenhum outro</p>
+	</div>
 
-        <p>
-            <input type="text" name="cnpj" id="cnpj" placeholder="insira o cnpj" autocomplete="off"/>
-        </p>
+    <div class="container">
+        <form class="form" style="margin-top:4%;" id="formEmpresa" name="formEmpresa" method="post" action="cadastroEmpresa.php">
+            <input class="input-form" type="text" name="nomeEmpresa" id="nomeEmpresa" placeholder="insira o nome da empresa" autocomplete="off" />
 
-       <p>
-            <input type="text" name="cidade" id="cidade" placeholder="insira sua cidade" autocomplete="off"/>
-        </p>
+            <input class="input-form" type="text" name="cnpj" id="cnpj" placeholder="insira o cnpj" autocomplete="off" />
+        
+            <input class="input-form" type="text" name="cidade" id="cidade" placeholder="insira sua cidade" autocomplete="off" />
+        
+            <input class="input-form" type="text" name="telefone" id="telefone" placeholder="insira o telefone" autocomplete="off" />
+        
+            <input class="entrar-btn" Type="submit" name="gravaEmpresa" id="gravaEmpresa" value="cadastrar" />
+        </form>
+    </div>
+    
+</body>
 
-        <p>
-            <input type="text" name="telefone" id="telefone" placeholder="insira o telefone" autocomplete="off"/>
-        </p>
-
-        <input Type="submit" name="gravaEmpresa" id="gravaEmpresa"
-        value="Cadastrar"/>
-    </body>
 </html>

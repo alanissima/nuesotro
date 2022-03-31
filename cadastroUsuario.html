@@ -1,32 +1,41 @@
 <!doctype html>
 <html>
-    <head>
-    <meta charset="utf-8">
-    <title>Cadastro Empresa</title>
-    </head>
 
-    <body>
-    <form id="formUsuario" name="formUsuario" method="post" action="cadastroUsuario.php">
+<head>
+	<title>cadastro em nuesotro</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
 
-        <p> 
-            <input type="text" name="email" id="email" placeholder="insira o email" autocomplete="off"/>
-        </p>
-        
-        <p>
-            <input type="text" name="senha" id="senha" placeholder="insira a senha" autocomplete="off"/>
-        </p>
+<body class="body-container">
+    
+    <div class="container">
+        <h1 class="logo-destaque">
+            nues<br>otro
+        </h1>
+        <p class="texto-destaque">não é como nenhum outro</p>
+    </div>
 
-        <div>
-            <input type="radio" name = "tipoUsuario" value = "empresa">
-            <label for = "empresa"> sou uma empresa </label>
-          </div>
-      
-          <div>
-            <input type="radio" name = "tipoUsuario" value = "cliente" >
-            <label for = "cliente"> sou um cliente </label>
-          </div>
+    <div class="container">
+        <form class="form" id="formUsuario" name="formUsuario" method="post" action="cadastroUsuario.php">
+            <input class="input-form" type="text" name="email" id="email" placeholder="insira o email" autocomplete="off" />
 
+            <input class="input-form" type="password" name="senhalogin" id="senha" placeholder="insira a senha" autocomplete="off" />
+    
+            <div>
+                <input class="radio-btn" type="radio" name="tipoUsuario" value="empresa">
+                <label for="empresa"> sou uma empresa </label>
+            </div>
+    
+            <div>
+                <input class="radio-btn" type="radio" name="tipoUsuario" value="cliente">
+                <label for="cliente"> sou um cliente </label>
+            </div>
+    
+            <input class="entrar-btn" Type="submit" name="gravaUsuario" id="gravaUsuario" value="cadastrar"/>
+        </form>
+    </div>
+</body>
 
-        <input Type="submit" name="gravaUsuario" id="gravaUsuario" value="Cadastrar"/>
-    </body>
 </html>

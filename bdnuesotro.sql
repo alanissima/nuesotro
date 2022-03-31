@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.5deb2
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Tempo de geração: 31-Mar-2022 às 08:38
--- Versão do servidor: 8.0.28-0ubuntu0.20.04.3
--- versão do PHP: 7.4.3
+-- Host: 127.0.0.1
+-- Tempo de geração: 25-Mar-2022 às 18:30
+-- Versão do servidor: 10.4.18-MariaDB
+-- versão do PHP: 8.0.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -25,14 +24,25 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `categoria`
+--
+
+CREATE TABLE `categoria` (
+  `idCategoria` int(11) NOT NULL,
+  `descricaoCategoria` varchar(150) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `cliente`
 --
 
 CREATE TABLE `cliente` (
-  `idUsuario` int NOT NULL,
+  `idUsuario` int(11) NOT NULL,
   `cpf` varchar(11) NOT NULL,
   `nomeCliente` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `cliente`
@@ -49,11 +59,11 @@ INSERT INTO `cliente` (`idUsuario`, `cpf`, `nomeCliente`) VALUES
 --
 
 CREATE TABLE `empresa` (
-  `idUsuario` int NOT NULL,
-  `cnpj` int NOT NULL,
+  `idUsuario` int(11) NOT NULL,
+  `cnpj` int(11) NOT NULL,
   `nomeEmpresa` varchar(50) NOT NULL,
-  `telefone` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `telefone` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -66,9 +76,9 @@ CREATE TABLE `endereco` (
   `Cidade` varchar(70) NOT NULL,
   `Bairro` varchar(70) NOT NULL,
   `Rua` varchar(50) NOT NULL,
-  `Numero` int NOT NULL,
-  `idEndereco` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `Numero` int(11) NOT NULL,
+  `idEndereco` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `endereco`
@@ -84,15 +94,14 @@ INSERT INTO `endereco` (`Estado`, `Cidade`, `Bairro`, `Rua`, `Numero`, `idEndere
 --
 
 CREATE TABLE `produto` (
-  `idProduto` int NOT NULL,
+  `idProduto` int(11) NOT NULL,
   `nomeProduto` varchar(50) NOT NULL,
-  `imagem` blob NOT NULL,
-  `categoria` varchar(100) NOT NULL,
+  `idCategoria` int(11) NOT NULL,
   `descricaoProduto` varchar(300) NOT NULL,
-  `estoque` int NOT NULL,
-  `cnpj` int NOT NULL,
+  `estoque` int(11) NOT NULL,
+  `cnpj` int(11) NOT NULL,
   `preco` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -101,21 +110,28 @@ CREATE TABLE `produto` (
 --
 
 CREATE TABLE `usuario` (
-  `idUsuario` int NOT NULL,
+  `idUsuario` int(11) NOT NULL,
+  `nome` varchar(100) NOT NULL,
   `senha` varchar(8) NOT NULL,
   `email` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `usuario`
 --
 
-INSERT INTO `usuario` (`idUsuario`, `senha`, `email`) VALUES
-(1, '11111111', 'duda@gmail.com');
+INSERT INTO `usuario` (`idUsuario`, `nome`, `senha`, `email`) VALUES
+(1, 'maria', '11111111', 'duda@gmail.com');
 
 --
 -- Índices para tabelas despejadas
 --
+
+--
+-- Índices para tabela `categoria`
+--
+ALTER TABLE `categoria`
+  ADD PRIMARY KEY (`idCategoria`);
 
 --
 -- Índices para tabela `cliente`
@@ -159,7 +175,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idUsuario` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

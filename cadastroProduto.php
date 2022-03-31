@@ -16,7 +16,7 @@ include("conexao.php");
         <form name="cadProduto" action="gravaProduto.php" method="post" enctype="multipart/form-data">
         <p><input type="text" name="nomeProduto" id="nomeProduto" placeholder="nome"></p>
         <p><input type="text" name="categoria" id="categoria" placeholder="categoria"></p>
-        <p><input type="text" name="descricaoProduto" id="descricaoProduto" placeholder="descrição"></p>
+        <p><input type="text" name="descricao" id="descricao" placeholder="descrição"></p>
         <p><input type="text" name="estoque" id="estoque" placeholder="estoque"></p>
         <p><input type="text" name="preco" id="preco" placeholder="preço"></p>
         <p><input type="text" name="cnpj" id="cnpj" placeholder="digite o cnpj da empresa"></p>

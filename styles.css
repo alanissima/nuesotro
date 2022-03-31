@@ -73,6 +73,17 @@ main{
     font-size: 20px;
 }
 
+/* CADASTROS */
+
+/*ARRUMAR O RADIO BUTTON*/
+.radio-btn{
+    height: 20px;
+    width: 20px;
+    border-radius: 100px;
+    display: block;
+    border: 1px solid var(--contraste);
+}
+
 /* DEFINIÇÕES MENU */
 
 .cabecalho-menu-logo{
@@ -133,17 +144,21 @@ main{
 .sair:hover{
     background-color: var(--complemento);
     border: hidden;
-    color: var(--principal);
-    font-size: 20px; 
 }
 
 a.sair{
-    padding-top: 10px;
     background-color: var(--principal);
     border: solid 2px var(--complemento);
     color: var(--complemento);
     font-size: 20px;
+    padding-top: 10px;
+}
 
+a.sair:hover{
+    border: hidden;
+    color: var(--complemento);
+    font-size: 20px;
+    padding-top: 50px;
 }
 
 /* DEFINIÇÕES INDEX */

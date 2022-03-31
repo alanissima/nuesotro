@@ -6,14 +6,14 @@ $senhalogin = $_POST["senhalogin"];
 
 if(!(empty($email) or empty($senhalogin))){
 include("conexao.php");
-$sql= " SELECT * from usuario where email = '$email' and senhalogin ='$senhalogin'";
+$sql= "SELECT * from usuario where email = '$email' and senhalogin ='$senhalogin'";
 echo "$sql";
 $res = mysqli_query($conexao,$sql);
 $linha = mysqli_num_rows($res);
 
 if($linha == 1) {
-    //$_SESSION["$email"] = $_POST["email"];
-    //$_SESSION["$senhalogin"] = $_POST["senhalogin"];
+    $_SESSION["$email"] = $_POST["email"];
+    $_SESSION["$senhalogin"] = $_POST["senhalogin"];
     header("Location: menu.html");
 
 exit;
