@@ -4,12 +4,9 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL); 
 
 require_once __DIR__ . "/conexao.php";
-
-$consulta = mysqli_query($conexao,"select idProduto, nomeProduto, descricao, estoque, preco, categoria from   produto where cnpj = 8769");
-//echo $consulta;
+/* ARRUMAR */
+$consulta = mysqli_query($conexao,"select idProduto, nomeProduto, descricao, estoque, preco, categoria from produto where cnpj = $cnpj");
 $num_linhas = mysqli_num_rows($consulta);
-//echo $num_linhas;
-//exit();
 $produtos = $consulta->fetch_all(MYSQLI_ASSOC);
 
 

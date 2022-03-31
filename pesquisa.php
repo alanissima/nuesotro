@@ -2,7 +2,7 @@
 include_once("conexao.php");
 $pesquisa = $_GET["pesquisa"];
 
-        $registrosNome= mysqli_query($conexao,"select nomeProduto, descricao, estoque, preco, categoria from
+        $registrosNome = mysqli_query($conexao,"select nomeProduto, descricao, estoque, preco, categoria from
         produto where nomeProduto like '%$pesquisa%' or categoria like '%$pesquisa%'");
 
         $num_linhas = mysqli_num_rows($registrosNome);

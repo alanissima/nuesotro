@@ -9,5 +9,5 @@ $cnpj = $_POST["cnpj"];
 
 $sqlGravaProduto = mysqli_query($conexao,"insert into produto(nomeProduto,categoria,descricao,estoque,preco,cnpj)
 value('$nomeProduto','$categoria','$descricao','$estoque','$preco','$cnpj')") or die("Erro ao gravar registro. " . mysqli_error($conexao));
-header('Location: pesquisa2.php');
+header('Location: pesquisa.php');
 ?>
