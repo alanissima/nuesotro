@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 25-Mar-2022 às 18:30
+-- Tempo de geração: 01-Abr-2022 às 00:21
 -- Versão do servidor: 10.4.18-MariaDB
 -- versão do PHP: 8.0.3
 
@@ -20,17 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `bdnuesotro`
 --
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `categoria`
---
-
-CREATE TABLE `categoria` (
-  `idCategoria` int(11) NOT NULL,
-  `descricaoCategoria` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -85,7 +74,7 @@ CREATE TABLE `endereco` (
 --
 
 INSERT INTO `endereco` (`Estado`, `Cidade`, `Bairro`, `Rua`, `Numero`, `idEndereco`) VALUES
-('', 'foz', '', '', 0, 0);
+('', 'foz', '', '', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -96,7 +85,7 @@ INSERT INTO `endereco` (`Estado`, `Cidade`, `Bairro`, `Rua`, `Numero`, `idEndere
 CREATE TABLE `produto` (
   `idProduto` int(11) NOT NULL,
   `nomeProduto` varchar(50) NOT NULL,
-  `idCategoria` int(11) NOT NULL,
+  `categoria` varchar(11) NOT NULL,
   `descricaoProduto` varchar(300) NOT NULL,
   `estoque` int(11) NOT NULL,
   `cnpj` int(11) NOT NULL,
@@ -111,7 +100,6 @@ CREATE TABLE `produto` (
 
 CREATE TABLE `usuario` (
   `idUsuario` int(11) NOT NULL,
-  `nome` varchar(100) NOT NULL,
   `senha` varchar(8) NOT NULL,
   `email` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -120,18 +108,12 @@ CREATE TABLE `usuario` (
 -- Extraindo dados da tabela `usuario`
 --
 
-INSERT INTO `usuario` (`idUsuario`, `nome`, `senha`, `email`) VALUES
-(1, 'maria', '11111111', 'duda@gmail.com');
+INSERT INTO `usuario` (`idUsuario`, `senha`, `email`) VALUES
+(1, '11111111', 'duda@gmail.com');
 
 --
 -- Índices para tabelas despejadas
 --
-
---
--- Índices para tabela `categoria`
---
-ALTER TABLE `categoria`
-  ADD PRIMARY KEY (`idCategoria`);
 
 --
 -- Índices para tabela `cliente`
@@ -170,6 +152,18 @@ ALTER TABLE `usuario`
 --
 -- AUTO_INCREMENT de tabelas despejadas
 --
+
+--
+-- AUTO_INCREMENT de tabela `endereco`
+--
+ALTER TABLE `endereco`
+  MODIFY `idEndereco` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de tabela `produto`
+--
+ALTER TABLE `produto`
+  MODIFY `idProduto` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
