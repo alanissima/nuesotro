@@ -1,5 +1,8 @@
 <?php
 include("conexao.php");
+
+/* <label for="imagem">Insira uma imagem do produto:</label>
+        <p><input class="form-control" type="file" name="imagem"/></p>*/
 ?>
 
 <!doctype html>
@@ -10,7 +13,7 @@ include("conexao.php");
     </head>
     
     <body>
-        <form name="cadProduto" action="gravaProduto.php" method="post">
+        <form name="cadProduto" action="gravaProduto.php" method="post" enctype="multipart/form-data">
         <p><input type="text" name="nomeProduto" id="nomeProduto" placeholder="nome"></p>
         <p><input type="text" name="categoria" id="categoria" placeholder="categoria"></p>
         <p><input type="text" name="descricaoProduto" id="descricaoProduto" placeholder="descrição"></p>
