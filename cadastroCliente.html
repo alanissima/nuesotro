@@ -1,22 +1,33 @@
-<!doctype html>
-<html>
-    <head>
-    <meta charset="utf-8">
-    <title>Cadastro Cliente</title>
-    </head>
+<!DOCTYPE html>
+<html lang="pt-br">
 
-    <body>
-    <form id="formCliente" name="formCliente" method="post" action="cadastroCliente.php">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles.css">
 
-        <p> 
-            <input type="text" name="nomeCliente" id="nomeCliente" placeholder="insira seu nome completo" autocomplete="off"/>
-        </p>
+    <title>cadastro de cliente em nuesotro</title>
+</head>
 
-        <p>
-            <input type="text" name="cpf" id="cpf" placeholder="insira seu cpf" autocomplete="off"/>
-        </p>
+<body class="body-container">
+    <!--LOGO-->
+    <div class="container">
+		<h1 class="logo-destaque">
+			nues<br>otro
+		</h1>
+		<p class="texto-destaque">não é como nenhum outro</p>
+	</div>
+
+    <!--FORM-->
+    <div class="container">
+        <form class="form" id="formCliente" name="formCliente" method="post" action="cadastroCliente.php">
+            <input class="input-form" type="text" name="nomeCliente" id="nomeCliente" placeholder="insira seu nome completo" autocomplete="off" />
         
-        <input Type="submit" name="gravaCliente" id="gravaCliente"
-        value="Cadastrar"/>
-    </body>
+            <input class="input-form" type="text" name="cpf" id="cpf" placeholder="insira seu cpf" autocomplete="off" />
+    
+            <input class="entrar-btn" Type="submit" name="gravaCliente" id="gravaCliente" value="cadastrar" />
+        </form>
+    </div>
+    
+</body>
 </html>
