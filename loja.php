@@ -1,11 +1,7 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL); 
-
 require_once __DIR__ . "/conexao.php";
 /* ARRUMAR */
-$consulta = mysqli_query($conexao,"select idProduto, nomeProduto, descricao, estoque, preco, categoria from produto where cnpj = $cnpj");
+$consulta = mysqli_query($conexao,"select idProduto, nomeProduto, descricao, estoque, preco, categoria from produto where cnpj = '$cnpj'");
 $num_linhas = mysqli_num_rows($consulta);
 $produtos = $consulta->fetch_all(MYSQLI_ASSOC);
 
@@ -16,16 +12,13 @@ echo "</pre>";*/
 
 /*
 for($i = 0; $i<$num_linhas; $i++) {
-
     $dados            = mysqli_fetch_array($registrosNome);
-
     $nomeProduto      = $dados["nomeProduto"];
     $descricaoProduto = $dados["descricao"];
     $estoque          = $dados["estoque"];
     $preco            = $dados["preco"];
     $categoria        = $dados["categoria"];
     //$imagem = $dados["imagem"];
-
     echo "<div>
             <div> imagem </div>
             <div> $nomeProduto<br>

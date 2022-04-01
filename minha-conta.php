@@ -1,23 +1,23 @@
 <!doctype html>
 <html>
 <head>
-    <title> minha loja </title>
+    <title> minha conta </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>  
-    <form name="confirmar" action="minha-loja.php" method="post">
-        <label>confirme o cnpj da sua loja:</label>
-        <input type="text" name="cnpj" id="cnpj">
+    <form name="confirmar" action="minha-conta.php" method="post">
+        <label>confirme seu cpf:</label>
+        <input type="text" name="cpf" id="cpf">
         <input type="submit" value="Confirmar">
     </form>
     </html>
 
-<?php
+    <?php
 require_once __DIR__ . "/conexao.php";
 
-$cnpj = $_POST['cnpj'];
+$cnpj = $_POST['cpf'];
 $consulta = mysqli_query($conexao,"select idProduto, nomeProduto, descricaoProduto, estoque, preco, categoria from produto where cnpj = '$cnpj'");
 $num_linhas = mysqli_num_rows($consulta);
 
