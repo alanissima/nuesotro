@@ -6,6 +6,6 @@ $cpf = $_POST["cpf"];
 
 $sqlCadastrarCliente = mysqli_query($conexao,"insert into cliente(nomeCliente,cpf)
 value('$nomeCliente','$cpf')") or die("Erro ao gravar registro. " . mysqli_error($conexao));
-header("Location: menu.html");
+header("Location: menuC.html");
 
 ?>
