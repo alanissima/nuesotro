@@ -64,7 +64,7 @@
                                 estoque: $estoque<br>
                                 preço unitário: $preco<br>
                                 categoria: $categoria<br>
-                                código: $idProduto<br><br>
+                                <a href='verProduto.php' class='produto-detalhes'>detalhes</a><br><br>
                             </div>
                     
                             <div class='produto-acoes'>                    
@@ -87,6 +87,7 @@
             $preco = $dados["preco"];
             $categoria = $dados["categoria"];
             //$imagem = $dados["imagem"];
+            //<a href='verProduto.php' class='detalhesProduto'>detalhes</a><br>
 
             echo"   <div class='resultado'>
                             <div class='produto-imagem'> imagem </div>
@@ -98,12 +99,13 @@
                                 estoque: $estoque<br>
                                 preço unitário: $preco<br>
                                 categoria: $categoria<br>
-                                código: $idProduto<br><br>
+                                código: $idProduto<br>
+                                <a href='verProduto.php' class='produto-detalhes'>detalhes</a><br><br>
                             </div>
                     
                             <div class='produto-acoes'>                    
                                 <button class='acao excluir' type='submit' value='excluir'>
-                                <a href='excluirProduto.html?idProduto=<?php echo $idProduto;?>'><img class='excluir' src='images/excluir-verde.png' onmouseover='this.src='images/excluir-roxo.png';' onmouseout='this.src='images/excluir-verde.png';'></a>                                
+                                <a href='excluirProduto.html?idProduto=$idProduto'><img class='excluir' src='images/excluir-verde.png' onmouseover='this.src='images/excluir-roxo.png';' onmouseout='this.src='images/excluir-verde.png';'></a>                                
                                 </button>
                             </div>
                         </div>";
