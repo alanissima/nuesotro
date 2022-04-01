@@ -13,8 +13,6 @@
     --complemento: #B6C1B9;
 }
 
-/* DEFINIÇÕES COMUNS */
-
 body{ 
     width: 100%;
     top: 50%;
@@ -30,30 +28,21 @@ main{
 }
 
 
-/**/
-
-.logo{
-    font-family: 'Gruppo';
-    font-size: 30px;
-    letter-spacing: 2px;
-    line-height: 1;
-    color: var(--contraste);
-    padding: none;
-}
+/*CABECALHO*/
 
 .cabecalho{
-    height: max-content;
+    background-color: var(--secundaria);
+    height: min-content;
+    width: 80%;
+    top: 0%;
+    text-align: center;
+
+    padding-bottom: 1.5em;
+    margin-left: 6em;
+    margin-bottom: 2em;
+    border: solid 5px var(--secundaria);
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
-
-    margin-left: 6em;
-    margin-right: 6em;
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
 }
 
 .cabecalho-logo{
@@ -64,27 +53,7 @@ main{
     font-size: 80px;
     line-height: 53px;
     text-align: center;
-
-    margin: 0;
 }
-
-.texto{
-    font-family: 'Source Sans Pro';
-    font-size: 20px;
-}
-
-/* CADASTROS */
-
-/*ARRUMAR O RADIO BUTTON*/
-.radio-btn{
-    height: 20px;
-    width: 20px;
-    border-radius: 100px;
-    display: block;
-    border: 1px solid var(--contraste);
-}
-
-/* DEFINIÇÕES MENU */
 
 .cabecalho-menu-logo{
     font-family: 'Gruppo';
@@ -96,87 +65,6 @@ main{
     text-align: center;
 
     margin: 0;
-}
-
-.menu-anuncio{
-    display: -webkit-inline-flex;
-}
-
-.anuncio{
-    background-color: var(--secundaria);
-    height: 200px;
-    width: 20%;
-
-    border-radius: 20px;
-    margin: 40px;
-}
-
-.menu-item{
-    font-family: 'Source Sans Pro';
-    font-size: 25px;
-    color: var(--complemento);
-    text-decoration: underline;
-
-    margin-left: 0.5em;
-}
-
-.menu-texto{
-    font-family: 'Source Sans Pro';
-    font-size: 20px;
-    color: var(--complemento);
-    text-align: justify;
-
-    margin-left: 0.5em;
-    padding-top: 10px;
-}
-
-.sair{
-    border-radius: 100px;
-    width: 150px;
-    height: 50px;
-    position: fixed;
-    margin-right: 0.7em;
-    margin-top: 10px;
-    left: 90%;
-    top: 90%;
-}
-
-.sair:hover{
-    background-color: var(--complemento);
-    border: hidden;
-}
-
-a.sair{
-    background-color: var(--principal);
-    border: solid 2px var(--complemento);
-    color: var(--complemento);
-    font-size: 20px;
-    padding-top: 10px;
-}
-
-a.sair:hover{
-    border: hidden;
-    color: var(--complemento);
-    font-size: 20px;
-    padding-top: 50px;
-}
-
-/* DEFINIÇÕES INDEX */
-
-body.body-container{ 
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    background-color: var(--principal);
-    font-family: 'Source Sans Pro';
-    font-size: 20px;
-    display: -webkit-inline-flex;
-}
-
-.container {
-    width: 50%;
-    height: 100%;
-    padding-top: 10%;
 }
 
 .logo-destaque{
@@ -201,6 +89,92 @@ body.body-container{
     text-align: center;
 
     padding-top: 10px;
+}
+
+/* DEFINIÇÕES MENU */
+
+.menu-anuncio{
+    display: -webkit-inline-flex;
+}
+
+.anuncio{
+    background-color: var(--secundaria);
+    height: 200px;
+    width: 400px;
+    text-align: center;
+    padding-top: 2em;
+    color: var(--complemento);
+
+    border-radius: 20px;
+    margin: 50px;
+}
+
+.menu-item{
+    font-family: 'Source Sans Pro';
+    font-size: 25px;
+    color: var(--complemento);
+    text-decoration: underline;
+
+    margin-left: 2em;
+}
+
+.menu-texto{
+    font-family: 'Source Sans Pro';
+    font-size: 22px;
+    color: var(--complemento);
+    text-align: justify;
+
+    margin-left: 2.2em;
+    margin-right: 3em;
+    padding-top: 10px;
+}
+
+.sair{
+    border: solid 3px var(--complemento);
+    border-radius: 100px;
+    width: 150px;
+    height: 50px;
+    position: fixed;
+    margin-right: 0.7em;
+    margin-top: 10px;
+    left: 89%;
+    top: 90%;
+}
+
+.sair:hover{
+    background-color: var(--complemento);
+    border: solid 3px transparent;
+}
+
+a.sair{
+    background-color: var(--principal);
+    color: var(--complemento);
+    font-size: 20px;
+    padding-top: 0.5em;
+}
+
+a.sair:hover{
+    color: var(--principal);
+    font-size: 20px;
+    padding-top: 0.5em;
+}
+
+/* FORMULARIOS */
+
+body.body-container{ 
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    background-color: var(--principal);
+    font-family: 'Source Sans Pro';
+    font-size: 20px;
+    display: -webkit-inline-flex;
+}
+
+.container {
+    width: 50%;
+    height: 100%;
+    padding-top: 10%;
 }
 
 .form{
@@ -237,10 +211,26 @@ body.body-container{
     justify-content: center;
 }
 
+.input-form::placeholder{
+    color: var(--contraste);
+}
+
 input:focus {
     box-shadow: 0 0 0 0;
     outline: 0;
 }
+
+/*
+****ARRUMAR O RADIO BUTTON
+    .radio-btn{
+        height: 20px;
+        width: 20px;
+        border-radius: 100px;
+        display: block;
+        border: 1px solid var(--contraste);
+        background-color: var(--principal);
+    }
+*/
 
 .entrar-btn{
     font-size: 25px;
